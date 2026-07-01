@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Notion Empty Trash Extended",
   "short_name": "NET_Extended",
-  "version": "1.2.0",
+  "version": "1.6",
   "description": "Adds the legacy Empty Trash button directly inside Notion.",
   "icons": {
     "16": "icons/net_ext_16.png",
