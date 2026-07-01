@@ -4,12 +4,6 @@
 
 Notion Empty Trash Extended is a browser extension that adds an inline `Empty Trash` button to Notion's Trash menu.
 
-This build keeps the button focused on one inline target only:
-
-```text
-notion-empty-trash-inline-button-v2
-```
-
 It also includes a small extension popup with an on/off toggle, so the button can be shown or hidden without removing the extension.
 
 ## Features
