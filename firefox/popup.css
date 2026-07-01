@@ -1,0 +1,161 @@
+:root {
+  color-scheme: light;
+  --notion-text: rgb(55, 53, 47);
+  --notion-muted: rgba(55, 53, 47, 0.58);
+  --notion-border: rgba(55, 53, 47, 0.12);
+  --notion-bg: rgb(255, 255, 255);
+  --notion-soft: rgb(247, 246, 243);
+  --notion-hover: rgba(55, 53, 47, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 292px;
+  margin: 0;
+  background: var(--notion-bg);
+  color: var(--notion-text);
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.popup {
+  padding: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--notion-border);
+}
+
+.mark {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--notion-border);
+  border-radius: 4px;
+  background: var(--notion-soft);
+  object-fit: contain;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+p {
+  color: var(--notion-muted);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.status-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 62px;
+  margin-top: 12px;
+  padding: 11px 12px;
+  border: 1px solid var(--notion-border);
+  border-radius: 6px;
+  background: var(--notion-soft);
+}
+
+.status-label,
+.status-copy {
+  display: block;
+}
+
+.status-label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.status-copy {
+  color: var(--notion-muted);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(55, 53, 47, 0.22);
+  transition: background 120ms ease;
+}
+
+.switch-track::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 15, 15, 0.16);
+  transition: transform 120ms ease;
+}
+
+.switch input:checked + .switch-track {
+  background: rgb(35, 131, 226);
+}
+
+.switch input:checked + .switch-track::after {
+  transform: translateX(16px);
+}
+
+.switch input:focus-visible + .switch-track {
+  outline: 2px solid rgba(35, 131, 226, 0.35);
+  outline-offset: 2px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--notion-muted);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.meta-row strong {
+  color: var(--notion-text);
+  font-weight: 500;
+}
+
+.status-card:not(.is-active) {
+  background: #fff;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NET_Extended</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <img class="mark" src="icons/net_ext_48.png" alt="" aria-hidden="true">
+        <div>
+          <h1>NET_Extended</h1>
+          <p>Notion Empty Trash Extended</p>
+        </div>
+      </header>
+
+      <section class="status-card is-active" id="statusCard">
+        <div>
+          <span class="status-label" id="statusLabel">Aktif</span>
+          <span class="status-copy" id="statusCopy">Tombol menu Trash tampil</span>
+        </div>
+
+        <label class="switch" aria-label="Aktifkan NET_Extended">
+          <input type="checkbox" id="enabledToggle" checked>
+          <span class="switch-track"></span>
+        </label>
+      </section>
+
+      <div class="meta-row">
+        <span>Target</span>
+        <strong>Trash menu</strong>
+      </div>
+
+      <div class="meta-row">
+        <span>Mode</span>
+        <strong>Inline only</strong>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
